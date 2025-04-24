@@ -7,19 +7,24 @@
 :root {
     --tamanho-header:80px;
     --tamanho-footer:65px;
-    --tamanho-banner:calc(100vh - var(--tamanho-header));
+    --tamanho-banner:calc(100vh - var(--tamanho-header) - 20px);
 }
+
+/* Header */
 
 header{
     display: flex;
     position: fixed;
-    background-color: #110700;
+    background-color: #020008;
     width: 100%;
     justify-content: space-between;
     height: var(--tamanho-header);
     border-bottom: 2px solid whitesmoke;
     align-items: center;
     z-index: 9999;
+    overflow: hidden;
+    padding: 10px 10px;
+    border-radius: 10px;
 }
 
 header h1{
@@ -34,6 +39,9 @@ header .navbar{
     justify-content: space-between;
     align-items: center;
     color: white;
+    background-color: rgb(4, 1, 29);
+    border-radius: 7px;
+    padding: 10px;
 }
 
 header .navbar ul{
@@ -49,6 +57,16 @@ header .navbar ul{
     color: white;
 }
 
+/* Tela inicial */
+
+section.paginaInicio .telaInicial{
+    background-image: url(../projeto_individual/imgs/backgroundTelaInicial.jpeg);
+    height: var(--tamanho-banner);
+    background-size:cover;
+}
+
+/* 1° parte de informações */
+
 section.primeiroBanner .bannerMain{
     display: flex;
     height: var(--tamanho-banner);
@@ -56,21 +74,21 @@ section.primeiroBanner .bannerMain{
 
 section.primeiroBanner .blockBackground {
     padding-top: 100px;
-    background-image: linear-gradient(to bottom right,#331601, #C85705);
+    background-image: linear-gradient(to bottom right,#050118, #030125);
     width: 50%;
-    height: 620px;
+    height: var(--tamanho-banner);
 }
 
 section.primeiroBanner .blockBackground p{
     color:white;
-    
     box-shadow:#110700;
+    height: var(--tamanho-banner);
 }
 
 section.primeiroBanner .backgroundMain {
     background-size: cover;
     background-repeat: no-repeat;
-    width: 50%;
+    width: 40%;
     height: 52%;
     transform: translate(50%, 20%);
 } 
@@ -85,14 +103,51 @@ section .blockBackground p{
 } */
 
 section.primeiroBanner .infoBanner{
-    background-image: linear-gradient(to bottom left,#331601, #C85705);
+    background-image: linear-gradient(to bottom left,#050118, #030125);
     display:block;
-    background-color: #bd5005;
     color: white;
     font-size: 19px;
     font-weight: 500;
-    width: 50%;
-    height: 600px;
+    width: 60%;
+    height: var(--tamanho-banner);
     padding-top: 100px;
+    padding-right: 20px;
+}
+
+section.primeiroBanner .albuns{
+    display: flex;
+    background-color: grey;
+    width: 100%;
+    height: var(--tamanho-banner);
+    justify-content: center;
+    padding-top: 200px;
+}
+
+section.primeiroBanner .albuns p{
+    position: absolute;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+section.primeiroBanner .album1{
+    padding-top: 20px;
+    align-items: center;
+    padding-right: 20px;
+    cursor:pointer;
+}
+
+section.primeiroBanner .album2{
+    padding-top: 20px;
+    align-items: center;
+    padding-right: 20px;
+    cursor: pointer;
+}
+
+section.primeiroBanner .album3{
+    padding-top: 20px;
+    align-items: center;
+    padding-right: 20px;
+    cursor: pointer;
 }
 
