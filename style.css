@@ -7,7 +7,7 @@
 }
 
 :root {
-    --tamanho-header:80px;
+    --tamanho-header:70px;
     --tamanho-footer:65px;
     --tamanho-banner:calc(100vh - var(--tamanho-header));
 }
@@ -17,15 +17,15 @@
 header{
     display: flex;
     position: fixed;
-    background-color: whitesmoke;
+    background-color: transparent;
     width: 100%;
-    justify-content: space-between;
-    height: var(--tamanho-header);
-    border-bottom: 2px solid black;
+    justify-content: center;
     align-items: center;
-    z-index: 9999;
+    height: var(--tamanho-header);
+    align-items: center;
     overflow: hidden;
-    padding: 5px 10px;
+    padding: 5px 5px 0px;
+    gap: 20px;
 }
 
 header h1{
@@ -43,7 +43,6 @@ header .navbar{
     background-color: whitesmoke;
     border-radius: 7px;
     padding: 10px;
-    padding-right: 50px;
     border: 1px solid black;
 }
 
@@ -60,26 +59,105 @@ header .navbar ul{
     color: black;
 }
 
-/* Tela TPAB */
+/* Tela Biografia */
 
-section.paginaTPAB .telaTPAB{
+section.paginaBiografia .telaBiografia{
+    background-image: linear-gradient(to top left, black, white);
+    background-size:cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 650px;
+    width: 1351px;
+}
+
+section.paginaBiografia .container{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    width: 250px;
+    height: 250px;
+}
+
+section.paginaBiografia .container img{
+    border: 1px solid rgb(82, 78, 78);
+    border-radius: 25px;
+}
+
+
+section.paginaBiografia .resumo{
+    font-size: 23px;
+    font-weight: 600;
+    color: beige;
+    margin-bottom: 23px;
+    margin-left: 80px;
+    text-indent: 15px;
+    text-shadow:0px 2px 1px black;
+}
+
+/* Tela Inicial */
+
+section.paginaInicial .telaTPAB{
     background-image: url(imgs/backgroundTPAB.jpg);
     background-size:1351px 650px;
     background-repeat: no-repeat;
     display: flex;
+    justify-content: center;
+    align-items: center;
     height: 650px;
 }
 
-section.paginaTPAB .container{
+section.paginaInicial .container{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row-reverse;
-    margin-left: 60px;
-    gap: 50px;
+    flex-direction: column-reverse;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    gap: 20px;
 }
 
-section.paginaTPAB .album{
+section.paginaInicial .titulo{
+    display: flex;
+    flex-direction:column;
+    font-size: 36px;
+    color: white;
+    font-weight: 600;
+    text-shadow: 0px 5px 2px black;
+    margin-right: 400px;
+}
+
+section.paginaInicial .subtitulo{
+    display: flex;
+    flex-direction:column;
+    font-size: 20px;
+    color: white;
+    font-weight: 600;
+    text-shadow: 0px 3px 2px black;
+}
+
+/* Tela Álbum*/
+
+section.paginaAlbum .telaAlbum{
+    background-image: linear-gradient(to bottom right, black, white);
+    justify-content: center;
+    align-items: center;
+    height: 650px;
+    width: 1351px;
+}
+
+section.paginaAlbum .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 50px;
+    gap: 50px;
+    height: 650px;
+}
+
+section.paginaAlbum .album{
     display: flex;
     align-items:center;
     justify-content: center;
@@ -97,7 +175,17 @@ section.paginaTPAB .album{
     border: 1px solid rgba(128, 128, 128, 0.5);
 }
 
-section.paginaTPAB .album button{
+section.paginaAlbum .album img{
+    border-radius: 50%;
+}
+
+section.paginaAlbum .album a{
+    list-style: none;
+    text-decoration: none;
+    color: white;
+}
+
+section.paginaAlbum .album button{
     padding: 6px;
     background-color: grey;
     font-size: 19px;
@@ -107,23 +195,8 @@ section.paginaTPAB .album button{
     border-radius: 6px;
 }
 
-section.paginaTPAB .album button:hover{
+section.paginaAlbum .album button:hover{
     scale: 1.07;
     transition: 0.2s;
     font-weight: 700;
-}
-
-section.paginaTPAB .titulo{
-    display: flex;
-    flex-direction:row-reverse;
-    font-size: 36px;
-    color: white;
-    font-weight: 700;
-    font-family: "Bebas-Neue";
-}
-
-section.paginaTPAB .album a{
-    list-style: none;
-    text-decoration: none;
-    color: white;
 }
