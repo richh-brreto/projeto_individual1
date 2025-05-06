@@ -8,23 +8,23 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Tagesschrift&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
-
 <body>
     <header>
         <div class="header">
             <img width="238px" height="78px" src="imgs/logoKendrick.webp" alt="">
         </div>
-        <navbar class="navbar">
+        <navbar class="navbar" >
             <ul>
-                <li></li>
-                <a href="#">Home</a>
                 <li>
-                    <a href="login.html">Login</a>
+                    <a href="#">Início</a>
                 </li>
                 <li>
-                    <a href="cadastro.html">Cadastre-se aqui!</a>
+                    <a href="cadastro.html">Cadastro</a>
+                </li>
+                <li>
+                    <a href="sobrenos.html">Sobre Nós</a>
                 </li>
             </ul>
         </navbar>
@@ -34,30 +34,32 @@
         <div class="telaTPAB">
             <div class="container">
                 <div class="titulo">
-                    <h2 style="font-family: Tagesschrift, system-ui;">To Pimp a <br> Butterfly</h2>
+                    <h2 style="font-family: Anton, sans-serif;">To Pimp a <br> Butterfly</h2>
                 </div>
                 <div class="subtitulo">
-                    <h3> Uma viagem pelo álbum que mudou a carreira de Kendrick Lamar</h3>
+                    <h3 style="font-family:Playfair Display, serif"> Uma viagem pelo álbum que mudou a carreira de Kendrick Lamar</h3>
                 </div>
             </div>
         </div>
     </section>
 
+    <div class="backgroundInfos">
     <section class="paginaBiografia">
         <div class="telaBiografia">
             <div class="container">
                 <div class="imgRosto">
-                    <img width="360px" height="360px" src="imgs/rostoKendrick.jpg" alt="">
+                    <img width="360px" height="360px" src="imgs/rostoKendrick.jpg" alt="Rosto Kendrick">
+                </div>
+                <div class="resumo">
+                    <p> Kendrick Lamar é um Rapper Norte-Americano conhecido por suas músicas introspectivas e por sua lírica que se destaca de todos os outros. <br> <br> </p>
+                    <p> Suas musicas narram sua vida e como ele chegou até onde está hoje. <br> <br>
+                        Nesse site você descobrirá sobre seu album mais revolucionário: <br> <br>
+                        <p style="font-size: 40px;">
+                            To Pimp a Butterfly
+                        </p> 
                 </div>
             </div>
-            <div class="resumo">
-                <p style="font-size: 28px;"> Kendrick Lamar é um Rapper Norte-Americano <br> conhecido por suas músicas introspectivas <br> e por sua lírica que se destaca de todos os outros. <br> <br> </p>
-                <p> Suas musicas narram sua vida e como ele chegou até onde está hoje. <br>
-                    Nesse site você descobrirá sobre seu album mais revolucionário: <br> <br>
-                    <p style="font-size: 40px; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
-                        To Pimp a Butterfly
-                    </p> 
-            </div>
+            
         </div>
     </section>
 
@@ -65,15 +67,39 @@
         <div class="telaAlbum">
             <div class="container">
                 <div class="album">
-                    <img height="250px" width="250px" src="imgs/albumTPAB.jpg" alt="">
+                    <div class="disco">
+                        <img height="250px" width="250px" src="imgs/albumTPAB.jpg" alt="albumTPAB">
+                        <div class="bolinha"></div>
+                    </div>
                     <button>
-                        <a href="info.html">
+                        <a href="info.html" class="botao">
                             Descubra sobre
                         </a>
                     </button>
                 </div>
+                <div class="setlist">
+                    <ul>
+                        <li> <p> Wesley's Theory </p> </li>
+                        <li> <p> For Free? </p> </li>
+                        <li> <p>King Kunta</p> </li>
+                        <li> <p>Institutionalized</p> </li>
+                        <li> <p>These Walls</p> </li>
+                        <li> <p>u</p></li>
+                        <li> <p>Alright</p> </li>
+                        <li> <p>For Sale?</p> </li>
+                        <li> <p>Momma</p> </li>
+                        <li> <p>Hood Politics</p> </li>
+                        <li> <p>How Much a Dollar cost</p> </li>
+                        <li> <p>Complexion (A Zulu Love)</p> </li>
+                        <li> <p>The Blacker The Berry</p> </li>
+                        <li> <p>You Ain't Gotta Lie (Momma Said)</p> </li>
+                        <li> <p>i</p> </li>
+                        <li> <p>Mortal Man</p> </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
+</div>
 </body>
 </html>
