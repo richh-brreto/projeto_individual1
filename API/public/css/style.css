@@ -324,7 +324,64 @@ section.infoMusicas .textos{
     text-shadow: 0px 2px 1px black;
     text-align: justify;
 }
-/*Primeira música (Alright)*/
+
+section.infoMusicas h2{
+    text-align: center;
+}
+
+/* Primeira Musica (Wesley's Theory)*/
+
+section.infoMusicas .wesleyTheory{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 650px;
+    gap: 15px;
+}
+
+section.infoMusicas .wesleyTheory img{
+    height: 450px;
+    justify-content: right;
+    align-items:end;
+    margin-left: 30px;
+}
+
+/* Segunda Música (For Free?)*/
+
+section.infoMusicas .forFree{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 650px;
+    gap: 15px;
+}
+
+section.infoMusicas .forFree img{
+    height: 450px;
+    justify-content: right;
+    align-items:end;
+    margin-left: 30px;
+}
+
+/* Terceira Música (King Kunta)*/
+
+section.infoMusicas .kingKunta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 650px;
+    gap: 15px;
+}
+
+section.infoMusicas .kingKunta img{
+    height: 400px;
+    justify-content: right;
+    align-items:end;
+    margin-left: 30px;
+}
+
+/* música (Alright)*/
+
 section.infoMusicas .alright{
     display: flex;
     justify-content: center;
