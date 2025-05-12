@@ -63,7 +63,7 @@ header .navbar ul{
 /* Tela Inicial */
 
 section.paginaInicial .telaTPAB{
-    background-image: url(imgs/backgroundTPAB.jpg);
+    background-image: url(../assets/imgs/backgroundTPAB.jpg);
     background-size:1351px 650px;
     background-repeat: no-repeat;
     display: flex;
@@ -129,16 +129,16 @@ section.paginaBiografia .container img{
 
 
 section.paginaBiografia .resumo{
+    font-size: 30px;
     font-weight: 500;
     margin-bottom: 23px;
     margin-left: 80px;
     text-indent: 20px;
     text-shadow:1px 2px 1px black;    
+    text-align: justify;
 }
 
 section.paginaBiografia .resumo p{
-    font-family: Raleway, sans-serif;
-    font-size: 25px;
     color: white;
     width: 800px;
 }
@@ -276,7 +276,103 @@ section.paginaAlbum .setlist ul{
 
 /* Página Informações (do álbum)*/
 
+/* Introdução do álbum*/
+
 section.introAlbum{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: grey;
     height: 650px;
+}
+
+section.introAlbum img{
+    margin-left: 20px;
+    margin-top: 50px;
+}
+section.introAlbum .container{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+section.introAlbum .textos{
+    font-size: 25px;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 120px;
+    margin-right: 35px;
+    text-indent: 20px;
+    font-weight: 500;
+    color: white;
+    text-shadow: 0px 2px 1px black;
+    text-align: justify;
+}
+
+/* Informação das músicas*/
+
+section.infoMusicas {
+    background-color: grey;
+}
+
+section.infoMusicas .textos{
+    font-size: 25px;
+    color: white;
+    text-indent: 20px;
+    margin-left: 30px;
+    margin-right: 20px;
+    text-shadow: 0px 2px 1px black;
+    text-align: justify;
+}
+/*Primeira música (Alright)*/
+section.infoMusicas .alright{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 650px;
+    gap: 15px;
+}
+
+section.infoMusicas .alright img{
+    height: 475px;
+    width: 50%;
+    justify-content: right;
+    align-items:end;
+    margin-right: 20px;
+}
+
+/*Segunda música (U)*/
+
+section.infoMusicas .u{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+    gap: 15px
+}
+
+section.infoMusicas .u img{
+    height: 475px;
+    width: 50%;
+    justify-content: left;
+    align-items:start;
+    margin-left: 20px;
+}
+
+/*Terceira Música (I)*/
+
+section.infoMusicas .i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+    gap: 15px
+}
+
+section.infoMusicas .i img{
+    height: 475px;
+    width: 50%;
+    justify-content: left;
+    align-items:start;
+    margin-left: 20px;
 }
