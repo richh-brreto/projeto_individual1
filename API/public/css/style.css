@@ -60,6 +60,27 @@ header .navbar ul{
     font-family: Bebas Neue, sans-serif;
 }
 
+/* Footer */
+
+.footer {
+  background-color: black;
+  height: 150px;
+  color: #fff;
+  display: flex;
+  font-size: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer .container {
+  align-items: center;
+  text-align: center;
+}
+
+.footer .container .version {
+  font-size: 12px;
+}
+
 /* Tela Inicial */
 
 section.paginaInicial .telaTPAB{
