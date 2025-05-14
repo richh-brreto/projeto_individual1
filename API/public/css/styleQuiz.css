@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family:'Times New Roman', Times, serif
+}
+
+/* Header */
+
+header{
+    display: flex;
+    position: fixed;
+    background-color: transparent;
+    width: 100%;
+    height: var(--tamanho-header);
+    align-items:center;
+    overflow: hidden;
+    gap: 20px;
+    margin-top: 5px;
+}
+
+header h1{
+    color: white;
+    box-shadow: whitesmoke;
+}
+
+header .navbar{
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    font-size: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+header .navbar ul{
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding:0;
+    list-style:none;
+    text-shadow: 1px 1px 1px white;
+    font-family: 'Bebas Neue', sans-serif ;
+}
+
+.navbar a{
+    text-decoration: none;
+    color: black;
+    font-family: Bebas Neue, sans-serif;
+}
+
+/* Footer */
+
+.footer {
+  background-color: black;
+  height: 150px;
+  color: #fff;
+  display: flex;
+  font-size: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer .container {
+  align-items: center;
+  text-align: center;
+}
+
+.footer .container .version {
+  font-size: 12px;
+}
+
+/* Jogo */
+
+section.jogo {
+    background-image: linear-gradient(145deg, #c7c5c5 10%, #363434);
+    height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section.jogo .container{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 17px;
+    width: 400px;
+    height: 470px;
+    font-weight: 500;
+    transition: 0.3s;
+    background: #5553537d;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.4px);
+    -webkit-backdrop-filter: blur(6.4px);
+    border: 1px solid rgba(128, 128, 128, 0.5);
+}
+
+.container .perguntas{
+    font-weight: 600;
+    font-size: 30px;
+    color: white;
+    text-shadow: 0px 2px 1px #363434;
+}
+
+.perguntas input{
+    border-radius: 50px;
+    border: 1px solid #363434;
+}
+
+.container button{
+    border-radius: 50px;
+    border: 1px solid #363434;
+    padding: 5px;
+    cursor: pointer;
+}
