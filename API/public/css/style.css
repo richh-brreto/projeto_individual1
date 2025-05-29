@@ -520,10 +520,82 @@ section.infoMusicas .hoodPolitics img{
     width: 475px;
     justify-content: right;
     align-items:end;
+    margin-left: 20px;
+}
+
+/* Décima Primeira Música (How Much a Dollar Cost)*/
+
+section.infoMusicas .howMuchaDollarCost{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 650px;
+    gap: 15px;
+}
+
+section.infoMusicas .howMuchaDollarCost img{
+    height: 475px;
+    width: 50%;
+    justify-content: right;
+    align-items:end;
     margin-right: 20px;
 }
 
-/*Terceira Música (I)*/
+/* Décima Segunda Música (Complexion (A Zulu Love))*/
+
+section.infoMusicas .complexion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 650px;
+    gap: 15px;
+}
+
+section.infoMusicas .complexion img{
+    height: 475px;
+    width: 50%;
+    justify-content: right;
+    align-items:end;
+    margin-left: 20px;
+}
+
+/* Décima Terceira Música (The Blacker The Berry) */
+
+section.infoMusicas .theBlackerTheBerry{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 650px;
+    gap: 15px;
+}
+
+section.infoMusicas .theBlackerTheBerry img{
+    height: 475px;
+    width: 50%;
+    justify-content: right;
+    align-items:end;
+    margin-right: 20px;
+}
+
+/* Décima Quarta Música (You Ain't Gotta Lie)*/
+
+section.infoMusicas .youAintGottaLie{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 650px;
+    gap: 15px;
+}
+
+section.infoMusicas .youAintGottaLie img{
+    height: 475px;
+    width: 50%;
+    justify-content: right;
+    align-items:end;
+    margin-right: 20px;
+}
+
+/* Décima Quinta Música (I)*/
 
 section.infoMusicas .i{
     display: flex;
@@ -536,6 +608,24 @@ section.infoMusicas .i{
 section.infoMusicas .i img{
     height: 475px;
     width: 50%;
+    justify-content: left;
+    align-items:start;
+    margin-right: 20px;
+}
+
+/* Décima Sexta Música (Mortal Man)*/
+
+section.infoMusicas .mortalMan{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+    gap: 15px
+}
+
+section.infoMusicas .mortalMan img{
+    height: 425px;
+    width: 40%;
     justify-content: left;
     align-items:start;
     margin-left: 20px;

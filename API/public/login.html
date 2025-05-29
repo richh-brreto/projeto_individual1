@@ -44,7 +44,7 @@
         </div>
         <div class="container">
             <div class="card card-login">
-                <h2>Olá de volta!</h2>
+                <h2>Seja bem vindo!</h2>
                 <div class="formulario">
                     <div class="campo">
                         <span>E-mail:</span>
@@ -56,9 +56,10 @@
                     </div>
                     <button class="botao" onclick="entrar()">Entrar</button>
                 </div>
-
+                <div class="irCadastro">
+                   <a href="cadastro.html">Não tem cadastro? clique aqui!</a> 
+                </div>
                 <div id="div_aguardar" class="loading-div">
-                    <!--img src="./assets/circle-loading.gif" id="loading-gif"-->
                 </div>
 
                 <div id="div_erros_login"></div>
@@ -66,22 +67,19 @@
         </div>
     </div>
 
-    <!--footer inicio-->
     <div class="footer">
         <div class="container">
             <h4>Richard Barreto - SPTech &copy; 2025</h4>
             <span class="version">v1.0.0</span>
         </div>
     </div>
-    <!--footer fim-->
+
 
 </body>
 
 </html>
 
 <script>
-
-
     function entrar() {
         aguardar();
 

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,20 +8,20 @@
     <link rel="stylesheet" href="css/styleQuiz.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
-<header>
+    <header>
         <div class="header">
             <img width="238px" height="78px" src="assets/imgs/logoKendrick.webp" alt="">
         </div>
-        <navbar class="navbar" >
+        <navbar class="navbar">
             <ul>
                 <li>
                     <a href="index.html">Início</a>
-                </li>
-                <li>
-                    <a href="cadastro.html">Cadastro</a>
                 </li>
                 <li>
                     <a href="login.html">Login</a>
@@ -29,24 +30,23 @@
         </navbar>
     </header>
 
-<section id="jogo" class="jogo">
-    <div class="container">
-        <div class="perguntas">
-            <label>Questão atual: <span id="spanNumeroDaQuestaoAtual"></span> de <span id="qtdQuestoes"></span> questões.</label>
-            <div id="questaoAtual">
-                <span id="questaoExibida"></span>
+    <section id="jogo" class="quiz">
+        <div class="container">
+            <div class="perguntas">
+                <p>Responda as perguntas!</p>
+                <div id="questaoAtual">
+                    <span id="questaoExibida"></span>
+                </div>
             </div>
-        </div>
             <input type="text" id="respostaInput" placeholder="Digite aqui sua resposta" />
 
-            
             <div class="botoes">
                 <button>Continuar</button>
                 <button>Confirmar Resposta</button>
                 <button onclick="tentarNovamente()">Tentar de novo</button>
             </div>
         </div>
-</section>
+    </section>
     <div class="footer">
         <div class="container">
             <h4>Richard Barreto - SPTech &copy; 2025</h4>
@@ -56,110 +56,14 @@
 </body>
 <script>
     
-    const listaPerguntas = [
-        {
-            pergunta: "Quantas vezes você ouviu o álbum?",
-            alternativaCorreta: ""
-        },
 
-        {
-            pergunta: "Qual sua música favorita do álbum?",
-            alternativaCorreta: "alternativaD"
-        },
 
-        {
-            pergunta: "Qual destes números é ímpar?",
-            alternativaA: "Dez",
-            alternativaB: "Doze",
-            alternativaC: "Oito",
-            alternativaD: "Onze",
-            alternativaCorreta: "alternativaD"
-        }
-    ]
-
-    function preencherHTMLcomQuestaoAtual(index) {
-        const questaoAtual = listaPerguntas[index]
-        numeroDaQuestaoAtual = index
-        console.log("questaoAtual")
-        console.log(questaoAtual)
-        document.getElementById("spanNumeroDaQuestaoAtual").innerHTML = Number(index) + 1 // ajustando porque o index começa em 0
-        document.getElementById("spanQuestaoExibida").innerHTML = questaoAtual.pergunta;
-        document.getElementById("respostaInput").innerHTML = questaoAtual.respostaInput;
-    }
-
-    function submeter() {
-        const options = document.getElementById("respostaInput"); // recupera alternativas no html
-
-        for (let i = 0; i < options.length; i++) {
-            if (options[i] ) {
-                break
-            }
-        }
-
-        if(options[i] == null){
-            return
-        } else {
-            btnSubmeter.disabled = true
-            btnProx.disabled = false
-
-            checarResposta()
-        }
-    }
-
-    function avancar() {
-        btnProx.disabled = true
-        btnSubmeter.disabled = false
-
-        if (numeroDaQuestaoAtual < quantidadeDeQuestoes - 1) {
-            preencherHTMLcomQuestaoAtual(numeroDaQuestaoAtual)
-        } else if (numeroDaQuestaoAtual == quantidadeDeQuestoes - 1) {
-            alert("Atenção... a próxima é a ultima questão!")
-            preencherHTMLcomQuestaoAtual(numeroDaQuestaoAtual)
-        } else {
-            finalizarJogo()
-        }
-        limparCoresBackgroundOpcoes()
-    }
 
     function tentarNovamente() {
         // atualiza a página
         window.location.reload()
     }
 
-    function checarResposta() {
-        const questaoAtual = listaDeQuestoes[numeroDaQuestaoAtual] // questão atual 
-        const respostaQuestaoAtual = questaoAtual.alternativaCorreta // qual é a resposta correta da questão atual
-
-        const options = document.getElementsByName("respostaInput"); // recupera alternativas no html
-
-        let alternativaCorreta = null // variável para armazenar a alternativa correta
-
-        options.forEach((respostaInput) => {
-            if (respostaInput.value != null) {
-                console.log("a resposta é válida")
-            }
-        })
-
-        /* sem uso por enquanto
-        // verifica se resposta assinalada é correta
-        options.forEach((respostaInput) => {
-            if (option.checked === true && option.value === respostaQuestaoAtual) {
-                document.getElementById(alternativaCorreta).classList.add("text-success-with-bg")
-                pontuacaoFinal++
-                certas++
-                document.getElementById("spanCertas").innerHTML = certas
-                numeroDaQuestaoAtual++
-            } else if (option.checked && option.value !== respostaQuestaoAtual) {
-                const wrongLabelId = option.labels[0].id
-
-                document.getElementById(wrongLabelId).classList.add("text-danger-with-bg")
-                document.getElementById(alternativaCorreta).classList.add("text-success-with-bg")
-                tentativaIncorreta++
-                erradas++
-                document.getElementById("spanErradas").innerHTML = erradas
-                numeroDaQuestaoAtual++
-            }
-        }) */
-    }
 </script>
+
 </html>
