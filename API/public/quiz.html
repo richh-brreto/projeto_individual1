@@ -12,8 +12,9 @@
         href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
 </head>
+<script src="./js/script.js"></script>
 
-<body>
+<body onload="buscarPerguntas()">
     <header>
         <div class="header">
             <img width="238px" height="78px" src="assets/imgs/logoKendrick.webp" alt="">
@@ -33,17 +34,15 @@
     <section id="jogo" class="quiz">
         <div class="container">
             <div class="perguntas">
-                <p>Responda as perguntas!</p>
-                <div id="questaoAtual">
+                <p>Responda o Questionario!</p>
+                <div class="questaoAtual" id="questaoAtual">
                     <span id="questaoExibida"></span>
                 </div>
+                <input type="select" id="ipt_resposta" placeholder="Escolha aqui sua resposta" />
             </div>
-            <input type="text" id="respostaInput" placeholder="Digite aqui sua resposta" />
 
             <div class="botoes">
-                <button>Continuar</button>
-                <button>Confirmar Resposta</button>
-                <button onclick="tentarNovamente()">Tentar de novo</button>
+                <button onclick="continuar()">Continuar</button>
             </div>
         </div>
     </section>
@@ -54,16 +53,4 @@
         </div>
     </div>
 </body>
-<script>
-    
-
-
-
-    function tentarNovamente() {
-        // atualiza a página
-        window.location.reload()
-    }
-
-</script>
-
 </html>

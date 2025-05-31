@@ -13,26 +13,28 @@
   <link rel="stylesheet" href="css/styleCadastro.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
   <!--header inicio-->
   <header>
-        <div class="header">
-            <img width="238px" height="78px" src="assets/imgs/logoKendrick.webp" alt="Logo Kendrick">
-        </div>
-        <navbar class="navbar" >
-            <ul>
-                <li>
-                    <a href="index.html">Início</a>
-                </li>
-                <li>
-                    <a href="login.html">Login</a>
-                </li>
-            </ul>
-        </navbar>
-    </header>
+    <div class="header">
+      <img width="238px" height="78px" src="assets/imgs/logoKendrick.webp" alt="Logo Kendrick">
+    </div>
+    <navbar class="navbar">
+      <ul>
+        <li>
+          <a href="index.html">Início</a>
+        </li>
+        <li>
+          <a href="login.html">Login</a>
+        </li>
+      </ul>
+    </navbar>
+  </header>
 
   <!--header fim-->
 
@@ -68,13 +70,12 @@
           </div>
           <button class="botao" onclick="cadastrar()">Cadastrar</button>
         </div>
-        <div id="div_aguardar" class="loading-div">
 
-        </div>
-
-        <div id="div_erros_login"></div>
       </div>
+
+      <div id="div_erros_login"></div>
     </div>
+  </div>
   </div>
 
 
@@ -98,7 +99,7 @@
       nomeVar == "" ||
       emailVar == "" ||
       senhaVar == "" ||
-      confirmacaoSenhaVar == "" 
+      confirmacaoSenhaVar == ""
     ) {
       cardErro.style.display = "block";
       mensagem_erro.innerHTML =
@@ -134,7 +135,7 @@
             "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
 
           setTimeout(() => {
-            window.location = "login.html";
+            window.location = "quiz.html";
           }, "2000");
 
           limparFormulario();
