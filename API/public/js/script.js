@@ -58,26 +58,18 @@ function continuar() {
     confirmou = false;
 }
 
+let idUsuario = localStorage.getItem('idUsuario');
 function confirmar() {
     let resposta = ipt_resposta.value;
     let indicePergunta = indiceAtual;
 
     if (!resposta) {
-        alert('PREENCHA UMA RESPOSTA ANTES CARAI');
+        alert('Selecione uma resposta antes!');
         return;
     } else {
         confirmou = true;
 
-        fetch('/respostas/guardarRespostas', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ resposta: resposta, indiceAtual: indicePergunta })
-        })
-            .then(response => response.json())
-            .then(data => {
-                console.log('Resposta salva:', data);
-            })
-            .catch(error => console.error('Erro ao guardar resposta:', error));
+        guardarRespostas();
     }
 }
 
@@ -94,6 +86,8 @@ function guardarRespostas() {
         },
         body: JSON.stringify({
             resposta: resposta,
+            indiceAtual: indiceAtual,
+            idUsuario: idUsuario
         })
     })
         .then(response => response.json())

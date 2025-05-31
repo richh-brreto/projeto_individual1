@@ -111,15 +111,12 @@
       setInterval(sumirMensagem, 5000);
     }
 
-    // Enviando o valor da nova input
     fetch("/usuarios/cadastrar", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        // crie um atributo que recebe o valor recuperado aqui
-        // Agora vá para o arquivo routes/usuario.js
         nomeServer: nomeVar,
         emailServer: emailVar,
         senhaServer: senhaVar,
@@ -129,28 +126,26 @@
         console.log("resposta: ", resposta);
 
         if (resposta.ok) {
-          cardErro.style.display = "block";
+      return resposta.json();
+    } else {
+      throw "Houve um erro ao tentar realizar o cadastro!";
+    }
+  })
+  .then(function (data) {
+    localStorage.setItem('idUsuario', data.id);
 
-          mensagem_erro.innerHTML =
-            "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+    setTimeout(() => {
+      window.location = "quiz.html";
+    }, 2000);
 
-          setTimeout(() => {
-            window.location = "quiz.html";
-          }, "2000");
-
-          limparFormulario();
-          finalizarAguardar();
-        } else {
-          throw "Houve um erro ao tentar realizar o cadastro!";
-        }
-      })
-      .catch(function (resposta) {
-        console.log(`#ERRO: ${resposta}`);
-        finalizarAguardar();
-      });
-
-    return false;
-  }
+    limparFormulario();
+    finalizarAguardar();
+  })
+  .catch(function (resposta) {
+    console.log(`#ERRO: ${resposta}`);
+    finalizarAguardar();
+  });
+}
 
   function sumirMensagem() {
     cardErro.style.display = "none";

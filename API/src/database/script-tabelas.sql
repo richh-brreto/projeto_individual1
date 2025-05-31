@@ -14,9 +14,10 @@ id INT PRIMARY KEY AUTO_INCREMENT,
 pergunta VARCHAR(100)
 );
 
-INSERT INTO pergunta (pergunta) VALUES
+INSERT INTO perguntas (pergunta) VALUES
 ('Qual sua faixa favorita do álbum To Pimp a Butterfly?'),
 ('Você costuma ouvir o álbum inteiro ou faixas específicas?'),
+('Quantas vezes você já ouviu o álbum?'),
 ('Qual tema do álbum mais te impacta?'),
 ('Você já recomendou esse álbum para alguém?'),
 ('Com que frequência você ouve Kendrick Lamar?');
@@ -24,6 +25,9 @@ INSERT INTO pergunta (pergunta) VALUES
 
 CREATE TABLE respostas (
 id INT PRIMARY KEY AUTO_INCREMENT, 
-resposta VARCHAR(100)
+resposta VARCHAR(100),
+fk_pergunta INT,
+fk_usuario INT,
+FOREIGN KEY (fk_pergunta) REFERENCES perguntas(id),
+FOREIGN KEY (fk_usuario) REFERENCES usuario(id)
 );
-

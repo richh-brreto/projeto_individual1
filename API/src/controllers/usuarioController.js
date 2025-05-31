@@ -52,6 +52,7 @@ function cadastrar(req, res) {
         usuarioModel.cadastrar(nome, email, senha)
             .then(
                 function (resultado) {
+                    resultado.id = resultado.insertId;
                     res.json(resultado);
                 }
             ).catch(

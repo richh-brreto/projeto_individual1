@@ -119,9 +119,11 @@
                     console.log(JSON.stringify(json));
                     sessionStorage.EMAIL_USUARIO = json[0].email;
                     sessionStorage.SENHA_USUARIO = json[0].senha;
+                    sessionStorage.NOME_USUARIO = json[0].nome;
+                    sessionStorage.ID_USUARIO = json.id;
 
                     setTimeout(function () {
-                        window.location = "quiz.html";
+                        window.location = "dashboard/cards.html";
                     }, 1000);
 
                 });

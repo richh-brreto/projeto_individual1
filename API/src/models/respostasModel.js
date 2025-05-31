@@ -1,7 +1,7 @@
 var database = require("../database/config");
 
-function guardarRespostas(resposta, indiceAtual) {
-        let comandoSQL = `INSERT INTO respostas (fk_pergunta, resposta) values(${indiceAtual + 1}, '${resposta}')`;
+function guardarRespostas(resposta, indiceAtual, idUsuario) {
+        let comandoSQL = `INSERT INTO respostas (fk_pergunta, resposta, fk_usuario) values(${indiceAtual + 1}, '${resposta}', ${idUsuario})`;
         return database.executar(comandoSQL)
 };
 
