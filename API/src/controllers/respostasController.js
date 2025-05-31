@@ -1,8 +1,8 @@
 var respostasModel = require("../models/respostasModel");
 
 function guardarRespostas(req, res) {
-    const { resposta, perguntaId } = req.body;
-    respostasModel.guardarRespostas(resposta, perguntaId).then(
+    const { resposta, indiceAtual } = req.body;
+    respostasModel.guardarRespostas(resposta, indiceAtual).then(
         function (resultado) {
             res.json(resultado)
         }

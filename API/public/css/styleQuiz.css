@@ -131,7 +131,7 @@ section.quiz .container{
     margin-right: 50px;
 }
 
-.perguntas input{
+.perguntas select{
     border-radius: 10px;
     border: 1px solid #363434;
     padding: 10px;

@@ -38,11 +38,14 @@
                 <div class="questaoAtual" id="questaoAtual">
                     <span id="questaoExibida"></span>
                 </div>
-                <input type="select" id="ipt_resposta" placeholder="Escolha aqui sua resposta" />
+                <select id="ipt_resposta">
+                    <option value="" disabled selected>Escolha aqui sua resposta</option>
+                </select>
             </div>
 
             <div class="botoes">
                 <button onclick="continuar()">Continuar</button>
+                <button onclick="confirmar()">Confirmar</button>
             </div>
         </div>
     </section>
@@ -53,4 +56,5 @@
         </div>
     </div>
 </body>
+
 </html>
