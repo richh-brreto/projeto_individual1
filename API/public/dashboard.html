@@ -12,15 +12,17 @@
         href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
 </head>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-<body onload="obterDadosGrafico(idUsuario), carregarIndicadores(), obterDadosGlobaisDoQuiz()">
+<body>
     <section class="header-lateral">
         <div class="header">
             <img width="238px" height="78px" src="assets/imgs/logoKendrick.webp" alt="">
         </div>
         <h1 id="bemVindo"></h1>
         <div class="navbar">
+            <div class="containerBotao">
+                <a href="dashboard.html">Inicial</a>
+            </div>
             <div class="containerBotao">
                 <a href="infoDashboard.html">Info</a>
             </div>
@@ -30,33 +32,31 @@
         </div>
     </section>
 
-    <section class="kpis">
-        <div class="indicadores">
-            <div class="container">
-                <h1 id="musicaFav"> Sua música favorita: </h1>
-            </div>
-            <div class="container">
-                <h1 id="temaImpacto"> Tema que mais te Impactou: </h1>
-            </div>
-            <div class="container">
-                <h1 id="nivelFa">Você é um ouvinte</h1>
-            </div>
+    <section class="info">
+        <div class="containerTextos">
+            <h1>
+                Bem vindo ao site! Aqui você terá acesso a gráficos e indicadores que refletem no formulário que foi respondido no seu cadastro.
+            </h1>
         </div>
-    </section>
-
-    <section class="paginaInicial">
-        <div class="container">
-            <div class="graficos">
-                <canvas class="conteudoGrafico" id="graficoFaixaGlobal"></canvas>
-                <canvas class="conteudoGrafico" id="graficoFrequenciaGlobal"></canvas>
-                <canvas class="conteudoGrafico" id="graficoTemaGlobal"></canvas>
-            </div>
+        <div class="containerTextos">
+            <h1>
+                Assim você poderá comparar suas respostas do formulário com a dos outros usuários, assim saber mais sobre
+                os
+                fãs do Kendrick Lamar assim como você!
+            </h1>
         </div>
+        <div class="album">
+                    <div class="disco">
+                        <img height="250px" width="250px" src="assets/imgs/albumTPAB.jpg" alt="albumTPAB">
+                        <div class="bolinha"></div>
+                    </div>
+                    <button>
+                        <a href="info.html" class="botao">
+                            Saiba Mais!
+                        </a>
+                    </button>
+                </div>
     </section>
-
-
 </body>
-
 <script src="./js/scriptDashboard.js"></script>
-
 </html>
