@@ -45,10 +45,10 @@ function continuar() {
             mostrarPergunta();
             confirmou = false;
         } else {
-            questaoExibida.innerHTML = `Questionário concluído!<br>Redirecionando para a Dashboard.`;
+            questaoExibida.innerHTML = `Questionário concluído!<br>Redirecionando para o Login.`;
             document.getElementById('ipt_resposta').style.display = 'none';
             setTimeout(function () {
-                window.location.href = "dashboard/cards.html";
+                window.location.href = "login.html";
             }, 2000);
         }
     } else {
@@ -61,7 +61,6 @@ function continuar() {
 let idUsuario = localStorage.getItem('idUsuario');
 function confirmar() {
     let resposta = ipt_resposta.value;
-    let indicePergunta = indiceAtual;
 
     if (!resposta) {
         alert('Selecione uma resposta antes!');
@@ -75,7 +74,7 @@ function confirmar() {
 
 let respostas = [];
 function guardarRespostas() {
-    const resposta = ipt_resposta.value.toUpperCase();
+    const resposta = ipt_resposta.value.trim();
 
     console.log('Enviando resposta:', resposta);
 

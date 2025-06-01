@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | TPAB</title>
+    <link rel="stylesheet" href="./css/styleDashboard.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<body onload="obterDadosGrafico(idUsuario), carregarIndicadores(), obterDadosGlobaisDoQuiz()">
+    <section class="header-lateral">
+        <div class="header">
+            <img width="238px" height="78px" src="assets/imgs/logoKendrick.webp" alt="">
+        </div>
+        <h1 id="bemVindo"></h1>
+        <div class="navbar">
+            <div class="containerBotao">
+                <a href="infoDashboard.html">Info</a>
+            </div>
+            <div class="containerBotao">
+                <a href="index.html">Sair</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="kpis">
+        <div class="indicadores">
+            <div class="container">
+                <h1 id="musicaFav"> Sua música favorita: </h1>
+            </div>
+            <div class="container">
+                <h1 id="temaImpacto"> Tema que mais te Impactou: </h1>
+            </div>
+            <div class="container">
+                <h1 id="nivelFa">Você é um ouvinte</h1>
+            </div>
+        </div>
+    </section>
+
+    <section class="paginaInicial">
+        <div class="container">
+            <div class="graficos">
+                <canvas class="conteudoGrafico" id="graficoFaixaGlobal"></canvas>
+                <canvas class="conteudoGrafico" id="graficoFrequenciaGlobal"></canvas>
+                <canvas class="conteudoGrafico" id="graficoTemaGlobal"></canvas>
+            </div>
+        </div>
+    </section>
+
+
+</body>
+
+<script src="./js/scriptDashboard.js"></script>
+
+</html>
