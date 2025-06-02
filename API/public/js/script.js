@@ -31,10 +31,14 @@ function mostrarPergunta() {
     questaoExibida.innerHTML = questao.pergunta;
 
     const select = document.getElementById('ipt_resposta');
-    select.innerHTML = `<option value="" disabled selected>Escolha aqui sua resposta</option>`;
-    alternativas[indiceAtual].forEach(alt => {
-        select.innerHTML += `<option value="${alt}">${alt}</option>`;
-    });
+    let html = `<option value="" disabled selected>Escolha aqui sua resposta</option>`;
+
+    for (let i = 0; i < alternativas[indiceAtual].length; i++) {
+        const alt = alternativas[indiceAtual][i];
+        html += `<option value="${alt}">${alt}</option>`;
+    }
+
+    select.innerHTML = html;
 }
 
 let confirmou = false;
