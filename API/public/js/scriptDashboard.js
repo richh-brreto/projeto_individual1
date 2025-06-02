@@ -119,13 +119,24 @@ function plotarGraficoFrequencia(respostas) {
         }
     }
 
+    let total = 0;
+    for (let i = 0; i < contagemFrequencias.length; i++) {
+        total += contagemFrequencias[i];
+    }
+
+    // Cálculo das porcentagens
+    const porcentagens = [0, 0, 0, 0];
+    for (let i = 0; i < contagemFrequencias.length; i++) {
+        porcentagens[i] = ((contagemFrequencias[i] / total) * 100).toFixed(1);
+    }
+
     new Chart(document.getElementById('graficoFrequenciaGlobal'), {
         type: 'doughnut',
         data: {
             labels: frequencias,
             datasets: [{
-                label: 'Vezes ouvidas (todos usuários)',
-                data: contagemFrequencias,
+                label: 'Porcentagem de vezes ouvidas (todos usuários)',
+                data: porcentagens,
                 backgroundColor: ['darkseagreen', 'darkorange', 'crimson', 'cornflowerblue'],
                 borderColor: ['white'],
                 borderWidth: 1
@@ -135,7 +146,7 @@ function plotarGraficoFrequencia(respostas) {
             plugins: {
                 title: {
                     display: true,
-                    text: 'Quantas vezes os usuários já ouviram o álbum',
+                    text: 'Porcentagem de vezes que os usuários já ouviram o álbum',
                 },
                 responsive: true,
                 scales: {
@@ -202,12 +213,6 @@ function carregarIndicadores() {
             if (response.ok) {
                 response.json().then(function (resposta) {
                     console.log(`Dados recebidos para indicadores: ${JSON.stringify(resposta)}`);
-
-                    console.log('1', resposta[1].resposta);
-                    console.log('2', resposta[2].resposta);
-                    console.log('3', resposta[3].resposta);
-                    console.log('4', resposta[4].resposta);
-                    console.log('5', resposta[5].resposta);
 
                     musicaFav.innerHTML = `Sua música favorita: ${resposta[0].resposta}`;
                     temaImpacto.innerHTML = `Tema que mais te impactou: ${resposta[3].resposta}`;

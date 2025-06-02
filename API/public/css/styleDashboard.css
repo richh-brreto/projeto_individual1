@@ -116,7 +116,7 @@ section.paginaInicial .conteudoGrafico {
 canvas {
     max-width: 480px;
     max-height: 400px;
-    background-color: #f5e9e99a;
+    background-color: #fffffff8;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 8px #0000001a;
@@ -144,6 +144,7 @@ section.kpis .container {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     height: 100px;
     width: 300px;
     margin-top: 50px;
